@@ -1,0 +1,52 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comments {
+	cursor: pointer;
+}
+
+.comment {
+	position: relative;
+	padding-top: 20px;
+}
+
+.comment:nth-of-type(1) {
+  padding-top: 0;
+}
+
+.comment-form {
+	margin-top: 20px;
+}
+
+.comment h4 small {
+	font-weight: normal;
+}
+
+.comment p {
+	padding: 10px 0 25px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.delete-confirmation {
+	position: absolute;
+	right: 20px;
+}
+
+.delete-confirmation.confirm-button {
+  color: #AAA;
+  font-size: 16px;
+  background-color: #fff;
+  background: none;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  padding-right: 0;
+}
+
+.delete-confirmation.delete-button {
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #f8f8f8 100%);
+  background-image: linear-gradient(to bottom, #f8f8f8 0, #f8f8f8 100%);
+  border: 1px solid #CCC;
+}

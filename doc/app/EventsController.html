@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class EventsController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/events_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-destroy">#destroy</a>
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-join">#join</a>
+    
+    <li><a href="#method-i-leave">#leave</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommentsHelper.html">CommentsHelper</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./EventsHelper.html">EventsHelper</a>
+  
+    <li><a href="./Notification.html">Notification</a>
+  
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./SessionsHelper.html">SessionsHelper</a>
+  
+    <li><a href="./SignupController.html">SignupController</a>
+  
+    <li><a href="./SignupHelper.html">SignupHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class EventsController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>])
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">validate_year</span>(<span class="ruby-identifier">params</span>)
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-identifier">e_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+
+  <span class="ruby-identifier">starts</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">start</span>
+
+  <span class="ruby-identifier">twilio_sid</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_SID&quot;</span>]
+  <span class="ruby-identifier">twilio_token</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_TOKEN&quot;</span>]
+  <span class="ruby-ivar">@twilio_client</span> = <span class="ruby-constant">Twilio</span><span class="ruby-operator">::</span><span class="ruby-constant">REST</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">twilio_sid</span>, <span class="ruby-identifier">twilio_token</span>
+
+  <span class="ruby-identifier">subscribers</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">subscriber_numbers</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">subscribers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">subscriber_numbers</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">mobile</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">subscriber_numbers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">number</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-ivar">@account</span> = <span class="ruby-ivar">@twilio_client</span>.<span class="ruby-identifier">account</span>
+      <span class="ruby-ivar">@message</span> = <span class="ruby-ivar">@account</span>.<span class="ruby-identifier">sms</span>.<span class="ruby-identifier">messages</span>.<span class="ruby-identifier">create</span>({
+        <span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'+14695027613'</span>,
+        <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">number</span>,
+        <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;A sub is needed for a soccer match on #{starts.strftime(&quot;%A, %b %e at%l:%M%P&quot;)}. You can join here: footysubs.com/match/#{e_id}&quot;</span>
+        })
+    <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-identifier">p</span> <span class="ruby-node">&quot;there was a problem #{e.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">events_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">e_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+
+  <span class="ruby-identifier">starts</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">start</span>
+
+  <span class="ruby-identifier">twilio_sid</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_SID&quot;</span>]
+  <span class="ruby-identifier">twilio_token</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_TOKEN&quot;</span>]
+  <span class="ruby-ivar">@twilio_client</span> = <span class="ruby-constant">Twilio</span><span class="ruby-operator">::</span><span class="ruby-constant">REST</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">twilio_sid</span>, <span class="ruby-identifier">twilio_token</span>
+
+  <span class="ruby-identifier">subscribers</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">users</span>
+  <span class="ruby-identifier">subscriber_numbers</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">subscribers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">subscriber_numbers</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">mobile</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">subscriber_numbers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">number</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@account</span> = <span class="ruby-ivar">@twilio_client</span>.<span class="ruby-identifier">account</span>
+    <span class="ruby-ivar">@message</span> = <span class="ruby-ivar">@account</span>.<span class="ruby-identifier">sms</span>.<span class="ruby-identifier">messages</span>.<span class="ruby-identifier">create</span>({
+      <span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'+14695027613'</span>,
+      <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">number</span>,
+      <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Subs are no longer needed for the match on #{starts.strftime(&quot;%A, %b %e at%l:%M%P&quot;)}. Be sure to check other matches for opportunities to play: footysubs.com&quot;</span>
+      })
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">destroy</span>
+  <span class="ruby-comment"># need to destroy events_users joins</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">events_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- destroy-method -->
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@events</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;start DESC&quot;</span>)
+  <span class="ruby-ivar">@organized</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:organizer_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_user</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;start ASC&quot;</span>)
+  <span class="ruby-ivar">@joined</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;start ASC&quot;</span>)
+  <span class="ruby-ivar">@open</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;open&quot;</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;start ASC&quot;</span>)
+  <span class="ruby-ivar">@full</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;full&quot;</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;start ASC&quot;</span>)
+  <span class="ruby-ivar">@ended</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ended&quot;</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;start DESC&quot;</span>)
+  <span class="ruby-ivar">@all_events</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>)
+  <span class="ruby-ivar">@all_events</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">start</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+      <span class="ruby-identifier">e</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ended&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-join" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">join</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="join-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">join</span>
+  <span class="ruby-ivar">@add_user</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>]).<span class="ruby-identifier">users</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">current_user</span>
+  <span class="ruby-ivar">@attendees</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>]).<span class="ruby-identifier">users</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-ivar">@needed</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>]).<span class="ruby-identifier">needed</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@attendees</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@needed</span>
+    <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;full&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">e_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">starts</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-identifier">organizer_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">organizer</span>
+  <span class="ruby-identifier">organizer_number</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">organizer_id</span>).<span class="ruby-identifier">mobile</span>
+
+  <span class="ruby-identifier">twilio_sid</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_SID&quot;</span>]
+  <span class="ruby-identifier">twilio_token</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_TOKEN&quot;</span>]
+  <span class="ruby-ivar">@twilio_client</span> = <span class="ruby-constant">Twilio</span><span class="ruby-operator">::</span><span class="ruby-constant">REST</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">twilio_sid</span>, <span class="ruby-identifier">twilio_token</span>
+
+  <span class="ruby-ivar">@account</span> = <span class="ruby-ivar">@twilio_client</span>.<span class="ruby-identifier">account</span>
+    <span class="ruby-ivar">@message</span> = <span class="ruby-ivar">@account</span>.<span class="ruby-identifier">sms</span>.<span class="ruby-identifier">messages</span>.<span class="ruby-identifier">create</span>({
+      <span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'+14695027613'</span>,
+      <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">organizer_number</span>,
+      <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{current_user.firstName} #{current_user.lastName} has joined as a sub for the match on #{starts.strftime(&quot;%A, %b %e at%l:%M%P&quot;)}. Match details: footysubs.com/match/#{e_id}&quot;</span>
+      })
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:back</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- join-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- join-method -->
+
+    
+      <div id="method-i-leave" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">leave</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="leave-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">leave</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>]).<span class="ruby-identifier">users</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">current_user</span>)
+  <span class="ruby-ivar">@attendees</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>]).<span class="ruby-identifier">users</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-ivar">@needed</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>]).<span class="ruby-identifier">needed</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>][<span class="ruby-value">:event_id</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@attendees</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@needed</span>
+    <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;open&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">e_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">starts</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-identifier">organizer_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">organizer</span>
+  <span class="ruby-identifier">organizer_number</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">organizer_id</span>).<span class="ruby-identifier">mobile</span>
+
+  <span class="ruby-identifier">twilio_sid</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_SID&quot;</span>]
+  <span class="ruby-identifier">twilio_token</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_TOKEN&quot;</span>]
+  <span class="ruby-ivar">@twilio_client</span> = <span class="ruby-constant">Twilio</span><span class="ruby-operator">::</span><span class="ruby-constant">REST</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">twilio_sid</span>, <span class="ruby-identifier">twilio_token</span>
+
+  <span class="ruby-ivar">@account</span> = <span class="ruby-ivar">@twilio_client</span>.<span class="ruby-identifier">account</span>
+    <span class="ruby-ivar">@message</span> = <span class="ruby-ivar">@account</span>.<span class="ruby-identifier">sms</span>.<span class="ruby-identifier">messages</span>.<span class="ruby-identifier">create</span>({
+      <span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'+14695027613'</span>,
+      <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">organizer_number</span>,
+      <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{current_user.firstName} #{current_user.lastName} is no longer signed up as a sub for the match on #{starts.strftime(&quot;%A, %b %e at%l:%M%P&quot;)}. Match details: footysubs.com/match/#{e_id}&quot;</span>
+      })
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:back</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- leave-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- leave-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@comments</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">comment_threads</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">'created_at asc'</span>)
+  <span class="ruby-ivar">@new_comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">build_from</span>(<span class="ruby-ivar">@event</span>, <span class="ruby-identifier">current_user</span>, <span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-identifier">organizer_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">organizer</span>
+  <span class="ruby-ivar">@organizer</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">organizer_id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/events_controller.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">needed</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:needed</span>]
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>])
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">start</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;full&quot;</span>
+    <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;open&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">e_id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+
+  <span class="ruby-identifier">starts</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">start</span>
+
+  <span class="ruby-identifier">twilio_sid</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_SID&quot;</span>]
+  <span class="ruby-identifier">twilio_token</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;TWILIO_TOKEN&quot;</span>]
+  <span class="ruby-ivar">@twilio_client</span> = <span class="ruby-constant">Twilio</span><span class="ruby-operator">::</span><span class="ruby-constant">REST</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">twilio_sid</span>, <span class="ruby-identifier">twilio_token</span>
+
+  <span class="ruby-identifier">subscribers</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">users</span>
+  <span class="ruby-identifier">subscriber_numbers</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">subscribers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">subscriber_numbers</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">mobile</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">subscriber_numbers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">number</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@account</span> = <span class="ruby-ivar">@twilio_client</span>.<span class="ruby-identifier">account</span>
+    <span class="ruby-ivar">@message</span> = <span class="ruby-ivar">@account</span>.<span class="ruby-identifier">sms</span>.<span class="ruby-identifier">messages</span>.<span class="ruby-identifier">create</span>({
+      <span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'+14695027613'</span>,
+      <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">number</span>,
+      <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;The match you joined scheduled for #{starts.strftime(&quot;%A, %b %e at%l:%M%P&quot;)} has been updated. Details: footysubs.com/match/#{e_id}&quot;</span>
+      })
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">event_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

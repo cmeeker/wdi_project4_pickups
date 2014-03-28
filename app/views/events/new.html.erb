@@ -1,0 +1,91 @@
+<div class="content">
+	<div class="content-padded">
+		<%= form_for @event do |f| %>
+		<div class="input-group">
+			<%= f.hidden_field :organizer_id, :value => current_user.id %>
+			<%= f.hidden_field :status, :value => "open" %>
+			<div class="input-row">
+				<%= f.label :needed, 'NEEDED' %>
+				<%= f.select :needed, options_for_select([
+					["1", "1"],
+					["2", "2"],
+					["3", "3"],
+					["4", "4"],
+					["5", "5"],
+					["6", "6"],
+					["7", "7"],
+					["8", "8"],
+					["9", "9"],
+					["10", "10"],
+					["11", "11"],
+					["14", "14"],
+					["22", "22"],
+					], @event.needed) %>
+				<br />
+			</div>
+
+			<div class="input-row">
+				<%= f.label :start, 'STARTS' %>
+				<%= datetime_select("event", "start", :order => [:month, :day], :use_short_month => true, :ampm => true, :minute_step => 15, :datetime_separator => '') %>
+				<select id="event_start_ampm">
+					<option value="0">AM</option>
+					<option value="1">PM</option>
+				</select>
+				<br />
+			</div>
+
+			<div class="input-row">
+				<%= f.label :location, 'LOCATION' %>
+				<%= f.select :location, options_for_select([
+				["Simi High", "Simi High"],
+						["Downtown", "Downtown"],
+						["Santa Monica CC", "Santa Monica CC"],
+						["Park by Bike Path", "Park by Bike Path"]
+					]) %>
+				<br />
+			</div>
+
+			<div class="input-row">
+				<%= f.label :league, 'LEAGUE' %>
+				<%= f.select :league, options_for_select([
+					["Other", "Other"],
+						["New", "New"],
+						["Pick-Up Only", "Pick-Up Only"],
+						["SM Soccer Football", "SM Soccer Football"],
+						["Santa Monica Co-ed Rec Soccer", "Santa Monica Co-ed Rec Soccer"]
+					]) %>
+				<br />
+			</div>
+
+
+			<div class="input-row">
+				<%= f.label :skill_level, 'SKILL' %>
+				<%= f.select :skill_level, options_for_select([
+					["Recreational", "Recreational"],
+					["Beginner", "Beginner"],
+					["Intermediate", "Intermediate"],
+					["Competitive", "Competitive"],
+					]) %>
+				<br />
+			</div>
+
+
+			<div class="input-row">
+				<%= f.label :field_type, 'FIELD' %>
+				<%= f.select :field_type, options_for_select([
+					["Turf", "Turf"],
+					["Grass", "Grass"],
+					["Hardcourt", "Hardcourt"],
+					]) %>
+				<br />
+			</div>
+		</div>
+
+			<h3 class="match-note"><%= f.label :note, 'NOTE' %></h3> <span class="match-note-parens">Max 140 characters</span><br />
+			<%= f.text_area :note, :cols => 40, :rows => 2 %>
+
+			<%= f.submit 'Post match', class: 'button-main button-block' %>
+		
+		<% end %>
+	</div>
+</div>

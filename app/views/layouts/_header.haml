@@ -1,0 +1,40 @@
+%header.bar-title
+  - if user_signed_in?
+    - if ui_display? params, "events", "index"
+      = link_to image_tag("icon-settings.png", :height => "25px"), edit_user_path(current_user), class: "button", :style => "padding-bottom: 0;"
+      %h1.title
+        %span{style: "display: none;"}
+        = image_tag "", style: "margin-top: 7px;", width: "97px", height: "35px"
+      = link_to image_tag("icon-post.png", :height => "22px", :style => "padding-top: 2px;"), new_match_path, class: "button", :style => "padding-bottom: 0;"
+    - elsif ui_display? params, "events", "show"
+      = link_to image_tag("previous.png", :height => "22px", :style => "padding-top: 2px;"), matches_path, class: "button", :style => "padding-bottom: 0;"
+      %h1.title
+        Match details
+      - if active_event? @event, current_user
+        = link_to "Edit", edit_match_path, class: "button", :style => "padding-top: 6px;"
+    - elsif ui_display? params, "events", "edit"
+      = link_to image_tag("icon-close.png", :height => "20px"), :back, class: "button", :style => "padding-top: 6px;"
+      %h1.title Edit match
+    - elsif ui_display? params, "users", "edit"
+      = link_to image_tag("icon-close.png", :height => "20px"), matches_path, class: "button", :style => "padding-top: 6px;"
+      %h1.title Edit Profile
+      = link_to "Sign out", destroy_user_session_path, method: "delete", class: "button", :style => "padding-top: 6px;"
+    - elsif ui_display? params, "events", "new"
+      = link_to image_tag("icon-close.png", :height => "20px"), events_path, class: "button", :style => "padding-top: 6px;"
+      %h1.title Post match
+  - elsif
+    - if ui_display? params, "devise/passwords", "new"
+      = link_to image_tag("previous.png", :height => "22px", :style => "padding-top: 2px;"), signin_path, class: "button", :style => "padding-bottom: 0;"
+      %h1.title
+        Reset password
+    - elsif ui_display? params, "devise/sessions", "new"
+      = link_to image_tag("icon-close.png", :height => "20px"), matches_path, class: "button", :style => "padding-top: 6px;"
+      %h1.title Sign in
+    - elsif ui_display? params, "devise/registrations", "new"
+      = link_to image_tag("icon-close.png", :height => "20px"), matches_path, class: "button", :style => "padding-top: 6px;"
+      %h1.title Sign up
+  - if is_root? request
+    %h1.title
+      %span{style: "display: none;"} 
+      %span{style: "display: none;"} 
+      = image_tag "", style: "margin-top: 7px;", width: "97px", height: "35px"

@@ -1,0 +1,51 @@
+// Place all the styles related to the signup controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media (min-width: 400px) {
+	.lander {
+	  margin: 0 auto;
+	  width: 300px;
+	}
+}
+
+@media (min-width: 700px) {
+	.signup-success {
+	  margin: 0 auto;
+	  width: 340px;
+	}
+
+	.lander-bg {
+		background: url(../assets/lander-bg.jpg) no-repeat;
+		background-color: rgb(249, 249, 249);
+		background-size: 125% auto;
+		padding-bottom: 500px;
+	}
+
+	.footysubs-icon {
+		position:absolute;
+		left:-85px;
+		top:40px;
+		border-radius: 8px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+
+	.footysubs-icon {
+		display: none;
+	}
+
+	.lander-bg {
+		background: url(../assets/lander-bg.jpg) no-repeat;
+		background-color: rgb(249, 249, 249);
+		background-size: 125% auto;
+	}
+}
+
+.lander-header {
+	margin: 60px auto 0 auto;
+	text-align: center;
+	width: 75%;
+}
+

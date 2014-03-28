@@ -1,0 +1,14 @@
+<div class="comment" id="comment-<%= comment.id %>">
+  <% if signed_in? && comment.user_id == current_user.id %>
+    <%= button_to "delete", comment_path(comment), :method => :delete, :remote => true, :disable_with => "X", :class => 'delete-confirmation', :form_class => 'delete-comment' %>
+  <% end %>
+  <h4>
+    <%= comment.user.firstName %> <%= comment.user.lastName %><br />
+    <small>
+      <%= comment.updated_at.strftime("%A, %b %e at%l:%M%P") %>
+    </small>
+  </h4>
+  <p>
+    <%= comment.body %>
+  </p>
+</div>

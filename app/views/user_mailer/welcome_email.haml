@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}/
+  %body
+    - if @user
+      %p
+        Hey #{@user.firstName.capitalize},
+    %p
+     
+    %p

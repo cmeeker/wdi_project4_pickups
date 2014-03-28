@@ -1,0 +1,44 @@
+<% if signed_in?%>
+
+	<header class="bar-title">
+		<%= link_to "Cancel", events_path, class: "button" %>
+		<h1 class="title">All users</h1>
+	</header>
+
+	<div class="content">
+		<div class="content-padded">
+			<ul>
+				<% @users.each do |u| %>
+					<li><%= u.firstName %> <%= u.lastName %> <%= link_to "edit",edit_user_path(u.id) %> <%= link_to "delete", user_path(u.id), :method => "DELETE" %></li>
+					<li><%= u.email %></li>
+					<li><%= u.mobile %></li>
+					<%= form_for u do |f| %>
+						<%= f.check_box(:opt_out) %>
+						<%= f.label(:opt_out, "Don't send me text messages") %> <%= f.submit 'Update' %>
+					<% end %>
+					<br />
+				<% end %>
+			</ul>
+		</div>
+	</div>
+
+<% elsif signed_in? && current_user.id != User.find(1).id || ! signed_in? %>
+
+	<header class="bar-title">
+		<%= link_to "Cancel", events_path, class: "button" %>
+		<h1 class="title">All users</h1>
+	</header>
+
+	<div class="content">
+		<div class="content-padded">
+
+		<% if ! signed_in? %>
+			<%= link_to "Sign in", signin_path %> or <%= link_to "Sign up", new_user_path %>
+		<% elsif signed_in? && current_user.id != User.find(1).id %>
+			<p>You do not have admin privileges :(</p>			
+		<% end %> 
+
+	</div>
+</div>
+
+<% end %>

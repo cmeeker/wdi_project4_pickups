@@ -1,0 +1,19 @@
+Fri, 28 Mar 2014 13:12:39 -0700
+doc/README_FOR_APP	Fri, 28 Mar 2014 00:36:21 -0700
+app/controllers/application_controller.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/controllers/comments_controller.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/controllers/events_controller.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/controllers/sessions_controller.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/controllers/signup_controller.rb	Fri, 28 Mar 2014 11:48:32 -0700
+app/controllers/users_controller.rb	Fri, 28 Mar 2014 00:52:22 -0700
+app/helpers/application_helper.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/helpers/comments_helper.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/helpers/events_helper.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/helpers/sessions_helper.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/helpers/signup_helper.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/helpers/users_helper.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/mailers/user_mailer.rb	Fri, 28 Mar 2014 00:40:52 -0700
+app/models/comment.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/models/event.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/models/notification.rb	Fri, 28 Mar 2014 00:36:21 -0700
+app/models/user.rb	Fri, 28 Mar 2014 00:36:21 -0700
